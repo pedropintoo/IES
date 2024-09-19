@@ -122,7 +122,7 @@ package structure and **class name**
     </dependency>
     ```
 
-2. Create a ```log4j2.xml``` file in the *```src/main/resources``` (good practice) *directory with the following content, to log the messages **to the console and to a file**:
+2. Create a ```log4j2.xml``` file in the ```src/main/resources``` (good practice) directory with the following content, to log the messages **to the console and to a file**:
     - **Appenders**: define where the log messages are sent (e.g., console, file)
     - **Loggers**: define the log levels (e.g., info, error, debug)
     - **PatternLayout**: define the format of the log messages
