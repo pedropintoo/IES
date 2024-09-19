@@ -1,4 +1,4 @@
-package weatherradar.ipma_client;
+package ies.lab01.weatherradar.ipma_client;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

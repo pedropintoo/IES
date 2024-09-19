@@ -1,32 +1,31 @@
-package weatherradar;
+package ies.lab01.weatherradar;
 
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import weatherradar.ipma_client.IpmaCityForecast; //may need to adapt package name
-import weatherradar.ipma_client.IpmaService;
+import ies.lab01.weatherradar.ipma_client.IpmaCityForecast; //may need to adapt package name
+import ies.lab01.weatherradar.ipma_client.IpmaService;
+
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * demonstrates the use of the IPMA API for weather forecast
  */
 public class WeatherStarter {
-
+    private static Logger logger = LogManager.getLogger(WeatherStarter.class);
     private static int CITY_ID_AVEIRO;
 
     public static void  main(String[] args) {
 
-        if (args.length > 0) {
-            try {
-                CITY_ID_AVEIRO = Integer.parseInt(args[0]);
-            } catch (NumberFormatException e) {
-                System.out.println("The city ID must be an integer");
-                System.exit(1);
-            }
-        } else {
-            System.out.println("Please provide the city ID as an argument");
+        try {
+            CITY_ID_AVEIRO = Integer.parseInt(args[0]);
+        } catch (Exception e) {
+            logger.error("Please provide the city ID as an argument");
             System.exit(1);
         }
+
 
         // get a retrofit instance, loaded with the GSon lib to convert JSON into objects
         Retrofit retrofit = new Retrofit.Builder()
@@ -36,11 +35,15 @@ public class WeatherStarter {
 
         // create a typed interface to use the remote API (a client)
         IpmaService service = retrofit.create(IpmaService.class);
+        logger.info("IPMA service created using retrofit");
+
         // prepare the call to remote endpoint
         Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY_ID_AVEIRO);
+        logger.info("Call IPMA API for city ID: " + CITY_ID_AVEIRO);
 
         try {
             Response<IpmaCityForecast> apiResponse = callSync.execute();
+            logger.info("IPMA API response received");
             IpmaCityForecast forecast = apiResponse.body();
 
             if (forecast != null) {
@@ -62,12 +65,16 @@ public class WeatherStarter {
                         firstDay.getClassWindSpeed(),
                         firstDay.getIdWeatherType()
                 );
+                logger.info("Weather forecast for city ID " + CITY_ID_AVEIRO + " received");
             } else {
-                System.out.println( "No results for this request!");
+                logger.error("No results for this request!");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
+            logger.error("Error calling IPMA API");
         }
+
+        System.exit(0); // close all threads
 
     }
 }
