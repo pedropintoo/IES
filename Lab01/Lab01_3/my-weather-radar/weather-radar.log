@@ -35,3 +35,7 @@
 2024-09-19 22:58:30 INFO  Call IPMA API for city ID: 1010500
 2024-09-19 22:58:30 INFO  IPMA API response received
 2024-09-19 22:58:30 INFO  Weather forecast for city ID 1010500 received
+2024-09-25 13:28:42 INFO  IPMA service created using retrofit
+2024-09-25 13:28:42 INFO  Call IPMA API for city ID: 1010500
+2024-09-25 13:28:42 INFO  IPMA API response received
+2024-09-25 13:28:42 INFO  Weather forecast for city ID 1010500 received
