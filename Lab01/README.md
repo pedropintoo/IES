@@ -164,3 +164,20 @@ package structure and **class name**
     logger.error("Error message");
     logger.debug("Debug message");
     ```
+
+
+## Portainer to manage Docker containers
+
+1. **Install Docker** - See in Docker documentation
+2. **Install Portainer** - See in Portainer documentation (using docker deployment option)
+3. **Config Portainer** - Access the Portainer interface, depending on which port you have configured in the docker run -p option (e.g., http://localhost:9443, http://localhost:9000). Create an admin user and select the local Docker environment.
+4. **Multiple services (Docker compose)** - When deploying multiple containers, it is recommended to use Docker Compose. Create a `compose.yaml` file with the services and deploy them with the command `docker-compose up` (-d to run in the background). 
+
+
+## Example of Docker Compose
+In directory `Lab01/Lab01_4/composetest` you have an example of Docker Compose with two services: a Redis database and a simple Flask application. When composing, it pulls a Redis image, builds an image for your code, and start the services you defined. In this case the code is statically copied into the image at build time. 
+
+ - **Build** the services: `docker compose build`
+ - **Run** the services: `docker compose up` (`--watch` for compose to watch for changes in the files)
+ - **Check** the services: http://localhost:8050/
+ - **Stop** the services: `docker compose down`
