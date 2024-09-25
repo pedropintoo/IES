@@ -1,0 +1,37 @@
+2024-09-19 22:49:00 INFO  IPMA service created using retrofit
+2024-09-19 22:49:00 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:49:00 INFO  IPMA API response received
+2024-09-19 22:49:00 INFO  Weather forecast for city ID 1010500 received
+2024-09-19 22:51:15 INFO  IPMA service created using retrofit
+2024-09-19 22:51:15 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:51:15 INFO  IPMA API response received
+2024-09-19 22:51:15 INFO  Weather forecast for city ID 1010500 received
+2024-09-19 22:51:23 INFO  IPMA service created using retrofit
+2024-09-19 22:51:23 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:51:23 INFO  IPMA API response received
+2024-09-19 22:51:23 INFO  Weather forecast for city ID 1010500 received
+2024-09-19 22:55:05 ERROR Please provide the city ID as an argument
+2024-09-19 22:55:16 INFO  IPMA service created using retrofit
+2024-09-19 22:55:16 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:55:16 INFO  IPMA API response received
+2024-09-19 22:55:16 INFO  Weather forecast for city ID 1010500 received
+2024-09-19 22:55:50 INFO  IPMA service created using retrofit
+2024-09-19 22:55:50 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:55:50 INFO  IPMA API response received
+2024-09-19 22:55:50 INFO  Weather forecast for city ID 1010500 received
+2024-09-19 22:56:47 INFO  IPMA service created using retrofit
+2024-09-19 22:56:47 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:56:47 INFO  IPMA API response received
+2024-09-19 22:56:47 INFO  Weather forecast for city ID 1010500 received
+2024-09-19 22:58:08 INFO  IPMA service created using retrofit
+2024-09-19 22:58:08 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:58:09 INFO  IPMA API response received
+2024-09-19 22:58:09 INFO  Weather forecast for city ID 1010500 received
+2024-09-19 22:58:22 INFO  IPMA service created using retrofit
+2024-09-19 22:58:22 INFO  Call IPMA API for city ID: 10105010
+2024-09-19 22:58:22 INFO  IPMA API response received
+2024-09-19 22:58:22 ERROR No results for this request!
+2024-09-19 22:58:30 INFO  IPMA service created using retrofit
+2024-09-19 22:58:30 INFO  Call IPMA API for city ID: 1010500
+2024-09-19 22:58:30 INFO  IPMA API response received
+2024-09-19 22:58:30 INFO  Weather forecast for city ID 1010500 received
