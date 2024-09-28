@@ -1,0 +1,170 @@
+2024-09-28 12:59:39 INFO  City: Viana do Castelo ID: 1160900
+2024-09-28 12:59:39 INFO  {"date":"2024-09-28","maxTemperature":19.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1160900,"minTemperature":8.7,"windSpeed":1}
+2024-09-28 12:59:49 INFO  City: Bragança ID: 1030800
+2024-09-28 12:59:49 INFO  {"date":"2024-09-28","maxTemperature":20.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1030800,"minTemperature":6.2,"windSpeed":1}
+2024-09-28 12:59:59 INFO  City: Évora ID: 1060300
+2024-09-28 12:59:59 INFO  {"date":"2024-09-28","maxTemperature":22.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1060300,"minTemperature":9.0,"windSpeed":1}
+2024-09-28 13:00:09 INFO  City: Santarém ID: 1141600
+2024-09-28 13:00:09 INFO  {"date":"2024-09-28","maxTemperature":25.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1141600,"minTemperature":10.5,"windSpeed":1}
+2024-09-28 13:00:19 INFO  City: Braga ID: 1030300
+2024-09-28 13:00:19 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":5,"city":1030300,"minTemperature":7.3,"windSpeed":1}
+2024-09-28 13:00:29 INFO  City: Portalegre ID: 1110600
+2024-09-28 13:00:29 INFO  {"date":"2024-09-28","maxTemperature":24.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1110600,"minTemperature":12.4,"windSpeed":1}
+2024-09-28 13:05:46 INFO  City: Braga ID: 1030300
+2024-09-28 13:05:46 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":5,"city":1030300,"minTemperature":7.3,"windSpeed":1}
+2024-09-28 13:05:56 INFO  City: Braga ID: 1030300
+2024-09-28 13:05:56 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":5,"city":1030300,"minTemperature":7.3,"windSpeed":1}
+2024-09-28 13:06:13 INFO  City: Aveiro ID: 1010500
+2024-09-28 13:06:13 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":2,"city":1010500,"minTemperature":11.0,"windSpeed":1}
+2024-09-28 13:06:23 INFO  City: Porto ID: 1131200
+2024-09-28 13:06:23 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":5,"city":1131200,"minTemperature":10.1,"windSpeed":1}
+2024-09-28 13:21:15 INFO  City: Bragança ID: 1030800
+2024-09-28 13:21:15 INFO  {"date":"2024-09-28","maxTemperature":20.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1030800,"minTemperature":6.2,"windSpeed":1}
+2024-09-28 13:21:16 INFO  City: Aveiro------ ID: 1010500
+2024-09-28 13:21:16 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":2,"city":1010500,"minTemperature":11.0,"windSpeed":1}
+2024-09-28 13:21:17 INFO  City: Aveiro------ ID: 1010500
+2024-09-28 13:21:17 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":2,"city":1010500,"minTemperature":11.0,"windSpeed":1}
+2024-09-28 13:21:18 INFO  City: Leiria ID: 1090700
+2024-09-28 13:21:18 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 13:21:19 INFO  City: Beja ID: 1020500
+2024-09-28 13:21:19 INFO  {"date":"2024-09-28","maxTemperature":25.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1020500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 13:21:20 INFO  City: Évora ID: 1060300
+2024-09-28 13:21:20 INFO  {"date":"2024-09-28","maxTemperature":22.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1060300,"minTemperature":9.0,"windSpeed":1}
+2024-09-28 13:21:21 INFO  City: Setúbal ID: 1151200
+2024-09-28 13:21:21 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1151200,"minTemperature":11.9,"windSpeed":1}
+2024-09-28 13:21:22 INFO  City: Portalegre ID: 1110600
+2024-09-28 13:21:22 INFO  {"date":"2024-09-28","maxTemperature":24.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1110600,"minTemperature":12.4,"windSpeed":1}
+2024-09-28 13:21:23 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 13:21:23 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 13:21:24 INFO  City: Beja ID: 1020500
+2024-09-28 13:21:24 INFO  {"date":"2024-09-28","maxTemperature":25.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1020500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 13:21:25 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 13:21:25 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 13:21:26 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 13:21:26 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 13:21:39 INFO  City: Leiria ID: 1090700
+2024-09-28 13:21:39 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 13:21:40 INFO  City: Santarém ID: 1141600
+2024-09-28 13:21:40 INFO  {"date":"2024-09-28","maxTemperature":25.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1141600,"minTemperature":10.5,"windSpeed":1}
+2024-09-28 13:21:41 INFO  City: Portalegre ID: 1110600
+2024-09-28 13:21:41 INFO  {"date":"2024-09-28","maxTemperature":24.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1110600,"minTemperature":12.4,"windSpeed":1}
+2024-09-28 13:21:42 INFO  City: Portalegre ID: 1110600
+2024-09-28 13:21:42 INFO  {"date":"2024-09-28","maxTemperature":24.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1110600,"minTemperature":12.4,"windSpeed":1}
+2024-09-28 13:21:43 INFO  City: Vila Real ID: 1171400
+2024-09-28 13:21:43 INFO  {"date":"2024-09-28","maxTemperature":19.4,"precipitationProbability":0.0,"weatherDescription":5,"city":1171400,"minTemperature":6.7,"windSpeed":1}
+2024-09-28 13:21:44 INFO  City: Coimbra ID: 1050200
+2024-09-28 13:21:44 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":2,"city":1050200,"minTemperature":10.7,"windSpeed":1}
+2024-09-28 13:21:45 INFO  City: Guarda ID: 1080500
+2024-09-28 13:21:45 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1080500,"minTemperature":14.0,"windSpeed":2}
+2024-09-28 13:21:46 INFO  City: Braga ID: 1030300
+2024-09-28 13:21:46 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":5,"city":1030300,"minTemperature":7.3,"windSpeed":1}
+2024-09-28 13:21:47 INFO  City: Lisboa ID: 1100900
+2024-09-28 13:21:47 INFO  {"date":"2024-09-28","maxTemperature":22.8,"precipitationProbability":0.0,"weatherDescription":5,"city":1100900,"minTemperature":8.4,"windSpeed":1}
+2024-09-28 13:21:48 INFO  City: Setúbal ID: 1151200
+2024-09-28 13:21:48 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1151200,"minTemperature":11.9,"windSpeed":1}
+2024-09-28 13:21:49 INFO  City: Bragança ID: 1030800
+2024-09-28 13:21:49 INFO  {"date":"2024-09-28","maxTemperature":20.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1030800,"minTemperature":6.2,"windSpeed":1}
+2024-09-28 13:21:50 INFO  City: Viana do Castelo ID: 1160900
+2024-09-28 13:21:50 INFO  {"date":"2024-09-28","maxTemperature":19.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1160900,"minTemperature":8.7,"windSpeed":1}
+2024-09-28 13:21:51 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 13:21:51 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 13:21:52 INFO  City: Lisboa ID: 1100900
+2024-09-28 13:21:52 INFO  {"date":"2024-09-28","maxTemperature":22.8,"precipitationProbability":0.0,"weatherDescription":5,"city":1100900,"minTemperature":8.4,"windSpeed":1}
+2024-09-28 13:21:53 INFO  City: Guarda ID: 1080500
+2024-09-28 13:21:53 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1080500,"minTemperature":14.0,"windSpeed":2}
+2024-09-28 13:21:54 INFO  City: Porto ID: 1131200
+2024-09-28 13:21:54 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":5,"city":1131200,"minTemperature":10.1,"windSpeed":1}
+2024-09-28 13:21:55 INFO  City: Setúbal ID: 1151200
+2024-09-28 13:21:55 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1151200,"minTemperature":11.9,"windSpeed":1}
+2024-09-28 13:21:56 INFO  City: Santarém ID: 1141600
+2024-09-28 13:21:56 INFO  {"date":"2024-09-28","maxTemperature":25.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1141600,"minTemperature":10.5,"windSpeed":1}
+2024-09-28 13:21:57 INFO  City: Porto ID: 1131200
+2024-09-28 13:21:57 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":5,"city":1131200,"minTemperature":10.1,"windSpeed":1}
+2024-09-28 13:21:58 INFO  City: Beja ID: 1020500
+2024-09-28 13:21:58 INFO  {"date":"2024-09-28","maxTemperature":25.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1020500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 13:21:59 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 13:21:59 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 13:22:00 INFO  City: Coimbra ID: 1050200
+2024-09-28 13:22:00 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":2,"city":1050200,"minTemperature":10.7,"windSpeed":1}
+2024-09-28 13:22:01 INFO  City: Setúbal ID: 1151200
+2024-09-28 13:22:01 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1151200,"minTemperature":11.9,"windSpeed":1}
+2024-09-28 13:22:02 INFO  City: Viseu ID: 1182300
+2024-09-28 13:22:02 INFO  {"date":"2024-09-28","maxTemperature":19.2,"precipitationProbability":0.0,"weatherDescription":2,"city":1182300,"minTemperature":7.0,"windSpeed":2}
+2024-09-28 13:22:03 INFO  City: Lisboa ID: 1100900
+2024-09-28 13:22:03 INFO  {"date":"2024-09-28","maxTemperature":22.8,"precipitationProbability":0.0,"weatherDescription":5,"city":1100900,"minTemperature":8.4,"windSpeed":1}
+2024-09-28 13:22:04 INFO  City: Vila Real ID: 1171400
+2024-09-28 13:22:04 INFO  {"date":"2024-09-28","maxTemperature":19.4,"precipitationProbability":0.0,"weatherDescription":5,"city":1171400,"minTemperature":6.7,"windSpeed":1}
+2024-09-28 13:22:05 INFO  City: Santarém ID: 1141600
+2024-09-28 13:22:05 INFO  {"date":"2024-09-28","maxTemperature":25.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1141600,"minTemperature":10.5,"windSpeed":1}
+2024-09-28 13:22:06 INFO  City: Beja ID: 1020500
+2024-09-28 13:22:06 INFO  {"date":"2024-09-28","maxTemperature":25.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1020500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 13:22:07 INFO  City: Bragança ID: 1030800
+2024-09-28 13:22:07 INFO  {"date":"2024-09-28","maxTemperature":20.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1030800,"minTemperature":6.2,"windSpeed":1}
+2024-09-28 13:22:08 INFO  City: Bragança ID: 1030800
+2024-09-28 13:22:08 INFO  {"date":"2024-09-28","maxTemperature":20.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1030800,"minTemperature":6.2,"windSpeed":1}
+2024-09-28 13:22:09 INFO  City: Faro ID: 1070500
+2024-09-28 13:22:09 INFO  {"date":"2024-09-28","maxTemperature":26.0,"precipitationProbability":0.0,"weatherDescription":5,"city":1070500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 13:22:10 INFO  City: Lisboa ID: 1100900
+2024-09-28 13:22:10 INFO  {"date":"2024-09-28","maxTemperature":22.8,"precipitationProbability":0.0,"weatherDescription":5,"city":1100900,"minTemperature":8.4,"windSpeed":1}
+2024-09-28 13:22:11 INFO  City: Setúbal ID: 1151200
+2024-09-28 13:22:11 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1151200,"minTemperature":11.9,"windSpeed":1}
+2024-09-28 13:22:12 INFO  City: Vila Real ID: 1171400
+2024-09-28 13:22:12 INFO  {"date":"2024-09-28","maxTemperature":19.4,"precipitationProbability":0.0,"weatherDescription":5,"city":1171400,"minTemperature":6.7,"windSpeed":1}
+2024-09-28 13:22:13 INFO  City: Braga ID: 1030300
+2024-09-28 13:22:13 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":5,"city":1030300,"minTemperature":7.3,"windSpeed":1}
+2024-09-28 13:22:14 INFO  City: Beja ID: 1020500
+2024-09-28 13:22:14 INFO  {"date":"2024-09-28","maxTemperature":25.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1020500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 13:22:15 INFO  City: Leiria ID: 1090700
+2024-09-28 13:22:15 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 13:22:16 INFO  City: Leiria ID: 1090700
+2024-09-28 13:22:16 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 13:22:17 INFO  City: Aveiro------ ID: 1010500
+2024-09-28 13:22:17 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":2,"city":1010500,"minTemperature":11.0,"windSpeed":1}
+2024-09-28 13:22:18 INFO  City: Faro ID: 1070500
+2024-09-28 13:22:18 INFO  {"date":"2024-09-28","maxTemperature":26.0,"precipitationProbability":0.0,"weatherDescription":5,"city":1070500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 13:22:19 INFO  City: Guarda ID: 1080500
+2024-09-28 13:22:19 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1080500,"minTemperature":14.0,"windSpeed":2}
+2024-09-28 13:22:20 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 13:22:20 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 15:48:01 INFO  City: Leiria ID: 1090700
+2024-09-28 15:48:01 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 15:48:02 INFO  City: Bragança ID: 1030800
+2024-09-28 15:48:02 INFO  {"date":"2024-09-28","maxTemperature":20.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1030800,"minTemperature":6.2,"windSpeed":1}
+2024-09-28 15:48:34 INFO  City: Beja ID: 1020500
+2024-09-28 15:48:34 INFO  {"date":"2024-09-28","maxTemperature":25.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1020500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 15:48:35 INFO  City: Portalegre ID: 1110600
+2024-09-28 15:48:35 INFO  {"date":"2024-09-28","maxTemperature":24.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1110600,"minTemperature":12.4,"windSpeed":1}
+2024-09-28 15:48:47 INFO  City: Coimbra ID: 1050200
+2024-09-28 15:48:47 INFO  {"date":"2024-09-28","maxTemperature":22.6,"precipitationProbability":0.0,"weatherDescription":2,"city":1050200,"minTemperature":10.7,"windSpeed":1}
+2024-09-28 15:48:48 INFO  City: Santarém ID: 1141600
+2024-09-28 15:48:48 INFO  {"date":"2024-09-28","maxTemperature":25.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1141600,"minTemperature":10.5,"windSpeed":1}
+2024-09-28 15:55:02 INFO  City: Beja ID: 1020500
+2024-09-28 15:55:02 INFO  {"date":"2024-09-28","maxTemperature":25.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1020500,"minTemperature":9.9,"windSpeed":1}
+2024-09-28 15:55:03 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 15:55:03 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 15:55:04 INFO  City: Portalegre ID: 1110600
+2024-09-28 15:55:04 INFO  {"date":"2024-09-28","maxTemperature":24.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1110600,"minTemperature":12.4,"windSpeed":1}
+2024-09-28 16:28:26 INFO  City: Porto ID: 1131200
+2024-09-28 16:28:26 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":5,"city":1131200,"minTemperature":10.1,"windSpeed":1}
+2024-09-28 16:28:27 INFO  City: Leiria ID: 1090700
+2024-09-28 16:28:27 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 16:41:44 INFO  City: Guarda ID: 1080500
+2024-09-28 16:41:44 INFO  {"date":"2024-09-28","maxTemperature":25.3,"precipitationProbability":0.0,"weatherDescription":5,"city":1080500,"minTemperature":14.0,"windSpeed":2}
+2024-09-28 16:41:45 INFO  City: Castelo Branco ID: 1040200
+2024-09-28 16:41:45 INFO  {"date":"2024-09-28","maxTemperature":18.5,"precipitationProbability":0.0,"weatherDescription":5,"city":1040200,"minTemperature":4.2,"windSpeed":1}
+2024-09-28 16:41:46 INFO  City: Lisboa ID: 1100900
+2024-09-28 16:41:46 INFO  {"date":"2024-09-28","maxTemperature":22.8,"precipitationProbability":0.0,"weatherDescription":5,"city":1100900,"minTemperature":8.4,"windSpeed":1}
+2024-09-28 16:41:47 INFO  City: Porto ID: 1131200
+2024-09-28 16:41:47 INFO  {"date":"2024-09-28","maxTemperature":21.0,"precipitationProbability":0.0,"weatherDescription":5,"city":1131200,"minTemperature":10.1,"windSpeed":1}
+2024-09-28 16:41:48 INFO  City: Viana do Castelo ID: 1160900
+2024-09-28 16:41:48 INFO  {"date":"2024-09-28","maxTemperature":19.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1160900,"minTemperature":8.7,"windSpeed":1}
+2024-09-28 16:41:49 INFO  City: Bragança ID: 1030800
+2024-09-28 16:41:49 INFO  {"date":"2024-09-28","maxTemperature":20.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1030800,"minTemperature":6.2,"windSpeed":1}
+2024-09-28 16:41:50 INFO  City: Leiria ID: 1090700
+2024-09-28 16:41:50 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 16:41:51 INFO  City: Viana do Castelo ID: 1160900
+2024-09-28 16:41:51 INFO  {"date":"2024-09-28","maxTemperature":19.9,"precipitationProbability":0.0,"weatherDescription":5,"city":1160900,"minTemperature":8.7,"windSpeed":1}
+2024-09-28 16:41:52 INFO  City: Leiria ID: 1090700
+2024-09-28 16:41:52 INFO  {"date":"2024-09-28","maxTemperature":16.1,"precipitationProbability":0.0,"weatherDescription":5,"city":1090700,"minTemperature":4.7,"windSpeed":1}
+2024-09-28 16:41:53 INFO  City: Vila Real ID: 1171400
+2024-09-28 16:41:53 INFO  {"date":"2024-09-28","maxTemperature":19.4,"precipitationProbability":0.0,"weatherDescription":5,"city":1171400,"minTemperature":6.7,"windSpeed":1}

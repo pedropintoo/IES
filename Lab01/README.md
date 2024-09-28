@@ -113,12 +113,12 @@ package structure and **class name**
     <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-api</artifactId>
-        <version>2.6.1</version>
+        <version>2.24.0</version>
         </dependency>
         <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-core</artifactId>
-        <version>2.6.1</version>
+        <version>2.24.0</version>
     </dependency>
     ```
 
@@ -181,3 +181,51 @@ In directory `Lab01/Lab01_4/composetest` you have an example of Docker Compose w
  - **Run** the services: `docker compose up` (`--watch` for compose to watch for changes in the files)
  - **Check** the services: http://localhost:8050/
  - **Stop** the services: `docker compose down`
+
+
+
+## Wrapping-up & integrating concepts
+
+ - **Shading the IPMA API Client**:
+    - Configure Maven Shade Plugin in the `pom.xml` file for Maven Project 2.
+    - Build the Shaded JAR with the command: `mvn clean package`. The resulting JAR will be available in the target directory as `ipma-api-client-1.0-SNAPSHOT-shaded.jar`.
+    - Add the shaded jar to the local repository with the command:
+        ```sh
+        mvn install:install-file -Dfile=./libs/ipma-api-client-1.0-SNAPSHOT-shaded.jar -DgroupId=ies.lab01.ipma.api.client -DartifactId=ipma-api-client -Dversion=1.0-SNAPSHOT -Dpackaging=jar -Dclassifier=shaded
+        ```
+    - Referencing the Shaded JAR: The `AnyCityForecast` project was updated to include the `shaded` version of the `IpmaApiClient` by specifying the `classifier` in its `pom.xml`:
+        ```xml
+        <dependency>
+            <groupId>ies.lab01.ipma.api.client</groupId>
+            <artifactId>ipma-api-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <classifier>shaded</classifier>
+        </dependency>
+        ```
+    - Run the project with the command: `mvn exec:java -Dexec.mainClass="ies.lab01.forecast.App"`.
+    - Configure Maven Shade Plugin in the `pom.xml` file for Maven Project 1.
+    - Build the Shaded JAR with the command: `mvn clean package`. The resulting JAR will be available in the target directory as `forecast-1.0-SNAPSHOT-shaded.jar`.
+    - Dockerize the application with the following steps:
+        - Create a `Dockerfile` in the project root directory with the following content:
+            ```Dockerfile
+            FROM eclipse-temurin:21-jdk-alpine 
+            COPY target/any-city-forecast-1.0-SNAPSHOT-shaded.jar /app.jar
+            ENTRYPOINT ["java","-jar","/app.jar"]
+            ```
+- **Compile the project**:
+    ```sh
+        mvn install:install-file -Dfile=./libs/ipma-api-client-1.0-SNAPSHOT-shaded.jar -DgroupId=ies.lab01.ipma.api.client -DartifactId=ipma-api-client -Dversion=1.0-SNAPSHOT -Dpackaging=jar -Dclassifier=shaded
+        mvn clean package
+    ```
+- **Build the Docker image**:
+    - `docker build -t any-city-forecast:latest .`
+- **Run the Docker container**:
+    - `docker run --name any-city-forecast-container any-city-forecast:latest`.
+- **Start the Docker container**: 
+    - `docker start any-city-forecast-container -a` (with the `-a` option to attach the container's output to the terminal).
+- **If running in background**:
+    - To see the logs: `docker logs any-city-forecast-container` or `docker exec any-city-forecast-container cat any-city-forecast.log`
+    - To stop the container: `docker stop any-city-forecast-container`
+    - To remove the container: `docker rm any-city-forecast-container`
+    - To remove the image: `docker rmi any-city-forecast:latest`
+    
