@@ -1,8 +1,11 @@
 115304
-# Lab 02 - ....
+# Lab 02 - Jetty Server, Jakarta EE (Tomcat), and Spring Boot
 
 ## Table of Contents
-...
+1. [Embedded Jetty Server](#embedded-jetty-server)
+2. [Server-side programming and application servers (Tomcat) - Jakarta EE](#server-side-programming-and-application-servers-tomcat---jakarta-ee)
+3. [Spring Boot - Web development with a full-featured framework](#spring-boot---web-development-with-a-full-featured-framework)
+4. [RESTful web service - quotes](#restful-web-service---quotes)
 
 ---
 
@@ -43,12 +46,12 @@ public class EmbeddedJettyExample {
 
 Hear, you create a Server from `org.eclipse.jetty.server.Server` and start it at port `8680`. The `dumpStdErr()` method is used to dump the server's standard error output to the console. The `join()` method is used to wait for the server to stop.
 
-Now, the server is running at `http://0.0.0.0:8680`. Try connectivity by searching on a browser or with a simple `GET` request:
+Once the server is running at `http://0.0.0.0:8680`, check connectivity with:
 ```bash
 curl -X GET http://0.0.0.0:8680
 ```
 
-Upgrade the server to handle http requests. For this, create a new class `HelloServlet.java` that will be serving as a simple servlet running inside an embedded jetty server with `ServerHandler`:
+To upgrade the server to handle HTTP requests, create a new class, `HelloServlet.java`:
 ```java
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -94,11 +97,11 @@ mvn exec:java -Dexec.mainClass="ies.lab02.EmbeddedJettyExample" -q
 curl -X GET http://0.0.0.0:8680?msg=Alice
 ```
 
-## Server-side programming and application servers (Tomcat)
+## Server-side programming and application servers (Tomcat) - Jakarta EE
 
-We are using Jakarta EE (formerly Java EE) to create a simple web application in `Lab02_2/JakartaWebStarted/src/main/java`. There are multiple ways to run the application server service and deploy artifacts into it; for now,
-we will run Tomcat in a Docker container.
-On first hand, we create `HelloServlet` derived from `HttpServlet`. Notice that `WebServlet` annotation is used to map the servlet to the endpoint  `/hello-servlet` and the `doGet` method is used to handle the GET requests.
+We are using **Jakarta EE** to create a simple web application and deploy it in a **Tomcat** server using **Docker**.
+
+Create HelloServlet derived from HttpServlet:
 ```java
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -147,7 +150,7 @@ services:
             - ./target/:/usr/local/tomcat/webapps/
 ```
 
-After, we need to build the project and run the docker container:
+Build the project and run the Docker container:
 ```bash
 mvn clean package
 docker compose up
@@ -383,3 +386,11 @@ curl -X GET http://localhost:8080/api/shows | jq
 curl -X GET http://localhost:8080/api/quote | jq
 curl -X GET http://localhost:8080/api/quotes?show=3 | jq
 ```
+
+## References
+
+- [Jetty Documentation](https://www.eclipse.org/jetty/documentation/)
+- [Jakarta EE Documentation](https://jakarta.ee/specifications/platform/8/)
+- [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+- [Thymeleaf Documentation](https://www.thymeleaf.org/)
+- [Tomcat Docker Image](https://hub.docker.com/_/tomcat)
