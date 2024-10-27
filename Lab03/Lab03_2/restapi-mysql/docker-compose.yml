@@ -1,0 +1,12 @@
+services:
+  mysql5:
+    image: mysql/mysql-server:5.7
+    container_name: mysql5
+    environment:
+      MYSQL_ROOT_PASSWORD: secret1
+      MYSQL_DATABASE: demo
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: secret2
+    ports:
+      - "33060:3306"
+    restart: always
