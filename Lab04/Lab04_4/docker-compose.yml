@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:12
+    container_name: postgres
+    environment:
+      POSTGRES_USER: quotes
+      POSTGRES_PASSWORD: secret2
+      POSTGRES_DB: quotes
+    ports:
+      - "${POSTGRES_LOCAL_PORT}:5432"
+    restart: always
+
+  quotes:
+    depends_on: 
+      - postgres
+    build: ./quotes
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_APPLICATION_JSON: >-
+        {
+          "spring.datasource.url"  : "jdbc:postgresql://postgres:5432/quotes",
+          "spring.datasource.username" : "quotes",
+          "spring.datasource.password" : "secret2",
+          "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.PostgreSQLDialect",
+          "spring.jpa.hibernate.ddl-auto" : "update"
+        }
+    stdin_open: true
+    tty: true
+
