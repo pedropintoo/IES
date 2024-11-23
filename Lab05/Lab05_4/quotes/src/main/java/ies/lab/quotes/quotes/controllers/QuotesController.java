@@ -1,5 +1,7 @@
 package ies.lab.quotes.quotes.controllers;
 
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,15 +15,15 @@ import ies.lab.quotes.quotes.exceptions.ResourceNotFoundException;
 import ies.lab.quotes.quotes.services.MovieService;
 import ies.lab.quotes.quotes.services.QuoteService;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 public class QuotesController 
 { 
     public record MovieRecord(Movie movie) { }
     public record QuoteRecord(Quote quote) { }
-    public record QuotesRecord(Set<Quote> contents) { }
-	public record MoviesRecord(Set<Movie> moviesId) { }
+    public record QuotesRecord(List<Quote> contents) { }
+	public record MoviesRecord(List<Movie> moviesId) { }
 
     private MovieService movieService;
     private QuoteService quoteService;
@@ -65,6 +67,12 @@ public class QuotesController
         quote.setMovie(movie);
         
         return new QuoteRecord(quoteService.createQuote(quote));
+    }
+
+    @MessageMapping("/api/quotes-in-real-time")
+    @SendTo("/quotes")
+    public Quote api_get_quotes_in_real_time(Quote quote) {
+        return quote;
     }
 
 }

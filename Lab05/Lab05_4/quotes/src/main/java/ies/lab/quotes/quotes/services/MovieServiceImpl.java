@@ -1,7 +1,6 @@
 package ies.lab.quotes.quotes.services;
 
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -45,8 +44,15 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public Set<Movie> getAllMovies() {
-        return movieRepository.findAll().stream().collect(Collectors.toSet());
+    public List<Movie> getAllMovies() {
+        return movieRepository.findAll();
+    }
+
+    @Override
+    public Movie getMovieByTitleAndYear(String title, int year) throws ResourceNotFoundException {
+        Movie movie = movieRepository.findByTitleAndYear(title, year)
+                     .orElseThrow(() -> new ResourceNotFoundException("Movie with title " + title + " and year " + year + " not found"));
+        return movie;
     }
     
 }

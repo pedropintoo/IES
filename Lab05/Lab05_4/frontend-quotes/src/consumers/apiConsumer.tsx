@@ -73,8 +73,6 @@ const getRandomQuote = async function () {
     return [];
 };
 
-
-
 // POST with Axios
 const postAxiosClient = async function (endpoint: string, data: any) {
     try {
@@ -113,5 +111,5 @@ const postQuote = async function (quote: string, movieId: number) {
     return [];
 };
 
-export { getAllQuotes, getAllMovies, getQuoteByMovieId, getRandomQuote, postMovie, postQuote };
+export { getAxiosClient, getAllQuotes, getAllMovies, getQuoteByMovieId, getRandomQuote, postMovie, postQuote };
 export type { Quote, Movie };

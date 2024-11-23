@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import {
   getAllQuotes,
@@ -10,6 +10,7 @@ import {
   postMovie,
   postQuote
 } from "./consumers/apiConsumer";
+import { useSubscription } from "react-stomp-hooks";
 
 function App() {
   const [result, setResult] = useState<Quote[] | Movie[] | never[]>([]);
@@ -22,6 +23,25 @@ function App() {
   const [year, setYear] = useState<number | undefined>();
 
   const [clickDescription, setClickDescription] = useState<string | undefined>();
+
+  const [realTimeQuotes, setRealTimeQuotes] = useState<Quote[] | never[]>([]);
+  const [isRealTime, setIsRealTime] = useState<boolean>(false);
+
+  let limit = 5;
+  useSubscription("/quotes", (message) => {
+    setRealTimeQuotes((prevQuotes) => {
+      const newQuotes = [...prevQuotes, JSON.parse(message.body)];
+      return newQuotes.length > limit ? newQuotes.slice(-limit) : newQuotes;
+    });
+  });
+
+  useEffect(() => {
+    if (clickDescription === "> Real Time Quotes") {
+      setIsRealTime(true);
+    } else {
+      setIsRealTime(false);
+    }
+  }, [clickDescription]);
 
   return (
     <>
@@ -64,6 +84,13 @@ function App() {
         }
         }>
           Get Random Quote
+        </button>
+        <br />
+        <button onClick={async () => {
+          setClickDescription("> Real Time Quotes");
+        }
+        }>
+          Get Real Time Quotes
         </button>
         <br />
         <h3>Create Movie and Quote</h3>
@@ -117,7 +144,9 @@ function App() {
         </div>
         <div>
           <h3>{clickDescription}</h3>
-          <pre>{JSON.stringify(result, null, 2)}</pre>
+          <pre>
+            {JSON.stringify(isRealTime ? realTimeQuotes : result, null, 2)}
+            </pre>
         </div>
       </div>
     </>

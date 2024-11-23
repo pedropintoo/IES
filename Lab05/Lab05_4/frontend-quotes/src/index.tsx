@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StompSessionProvider} from "react-stomp-hooks";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  
   <React.StrictMode>
-    <App />
+    <StompSessionProvider
+      url={"ws://localhost:8080/quotes-api"}
+    >
+      <App />
+    </StompSessionProvider>
   </React.StrictMode>
 );
 

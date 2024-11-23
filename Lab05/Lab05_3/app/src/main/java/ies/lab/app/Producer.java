@@ -9,6 +9,9 @@ import org.springframework.boot.ApplicationRunner;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import ies.lab.app.dto.Message;
 
 @Configuration
 public class Producer {
@@ -24,7 +27,13 @@ public class Producer {
     @Bean
     public ApplicationRunner runner(KafkaTemplate<String, String> template) {
         return args -> {
-            template.send("lab05_115304", "Producer in Spring Boot, Hello World!");
+            try {
+                Message message = new Message("0", 0, "Hello World!");
+                String messageJson = new ObjectMapper().writeValueAsString(message);
+                template.send("lab05_115304", messageJson);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         };
     }
 

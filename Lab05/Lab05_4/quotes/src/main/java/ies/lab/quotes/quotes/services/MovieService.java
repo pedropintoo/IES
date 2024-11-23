@@ -1,6 +1,6 @@
 package ies.lab.quotes.quotes.services;
 
-import java.util.Set;
+import java.util.List;
 
 import ies.lab.quotes.quotes.entities.Movie;
 import ies.lab.quotes.quotes.exceptions.ResourceNotFoundException;
@@ -15,6 +15,8 @@ public interface MovieService {
     
     Movie getMovieById(Long movieId) throws ResourceNotFoundException;
     
-    Set<Movie> getAllMovies();
+    List<Movie> getAllMovies();
+
+    Movie getMovieByTitleAndYear(String title, int year) throws ResourceNotFoundException;
 
 }

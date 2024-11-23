@@ -1,4 +1,30 @@
 services:
+  
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.4
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 22181:2181
+
+  kafka:
+    image: confluentinc/cp-kafka:7.4.4
+    depends_on:
+      - zookeeper
+    ports:
+      - 29092:29092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      # kafka:9092 is inter-container communication / localhost:29092 is external communication
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_LOG_RETENTION_MS: 10000
+      KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS: 5000
+  
   postgres:
     image: postgres:12
     container_name: postgres
@@ -14,7 +40,9 @@ services:
   quotes:
     depends_on: 
       - postgres
-    build: ./quotes
+      - kafka
+    build: 
+      context: ./quotes
     env_file: ./.env
     ports:
       - "${QUOTES_LOCAL_PORT}:${QUOTES_DOCKER_PORT}"
@@ -43,29 +71,7 @@ services:
       - NODE_ENV=development
 
 
-  zookeeper:
-    image: confluentinc/cp-zookeeper:7.4.4
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-    ports:
-      - 22181:2181
-
-  kafka:
-    image: confluentinc/cp-kafka:7.4.4
-    depends_on:
-      - zookeeper
-    ports:
-      - 29092:29092
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_LOG_RETENTION_MS: 10000
-      KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS: 5000
+  
 
     
 

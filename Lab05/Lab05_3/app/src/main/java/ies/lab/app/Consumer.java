@@ -7,6 +7,8 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import ies.lab.app.dto.Message;
+
 @Configuration
 public class Consumer {
 
@@ -18,8 +20,8 @@ public class Consumer {
                 .build();
     }
 
-    @KafkaListener(id = "consumerId", topics = "lab05_115304")
-    public void listen(String in) {
+    @KafkaListener(topics = "lab05_115304", containerFactory = "messageKafkaListenerContainerFactory")
+    public void listen(Message in) {
         System.out.println("Received message: " + in);
     }
 }

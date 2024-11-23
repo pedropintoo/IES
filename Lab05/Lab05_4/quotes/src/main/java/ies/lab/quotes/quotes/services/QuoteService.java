@@ -1,6 +1,6 @@
 package ies.lab.quotes.quotes.services;
 
-import java.util.Set;
+import java.util.List;
 
 import ies.lab.quotes.quotes.entities.Quote;
 import ies.lab.quotes.quotes.exceptions.ResourceNotFoundException;
@@ -15,10 +15,12 @@ public interface QuoteService {
     
     Quote getQuoteById(Long quoteId) throws ResourceNotFoundException;
     
-    Set<Quote> getAllQuotes();
+    List<Quote> getAllQuotes();
 
     Quote getRandomQuote();
 
-    Set<Quote> getQuotesForMovieId(Long movieId) throws ResourceNotFoundException;
+    List<Quote> getQuotesForMovieId(Long movieId) throws ResourceNotFoundException;
+
+    List<Quote> getQuotesInRealTime(int limit);
 
 }

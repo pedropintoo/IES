@@ -1,9 +1,10 @@
 package ies.lab.quotes.quotes.services;
 
-import java.util.Set;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import ies.lab.quotes.quotes.entities.Quote;
 import ies.lab.quotes.quotes.exceptions.ResourceNotFoundException;
@@ -13,14 +14,18 @@ import ies.lab.quotes.quotes.repositories.QuotesRepository;
 public class QuoteServiceImpl implements QuoteService {
 
     private QuotesRepository quotesRepository;
+    private SimpMessagingTemplate messagingTemplate;
 
-    public QuoteServiceImpl(QuotesRepository quotesRepository) {
+    public QuoteServiceImpl(QuotesRepository quotesRepository, SimpMessagingTemplate messagingTemplate) {
         this.quotesRepository = quotesRepository;
+        this.messagingTemplate = messagingTemplate;
     }
 
     @Override
     public Quote createQuote(Quote quote) {
-        return quotesRepository.save(quote);
+        Quote insertedQuote = quotesRepository.save(quote);
+        messagingTemplate.convertAndSend("/quotes", insertedQuote); // update websocket to notify clients
+        return insertedQuote;
     }
 
     @Override
@@ -45,8 +50,8 @@ public class QuoteServiceImpl implements QuoteService {
     }
 
     @Override
-    public Set<Quote> getAllQuotes() {
-        return quotesRepository.findAll().stream().collect(Collectors.toSet());
+    public List<Quote> getAllQuotes() {
+        return quotesRepository.findAll();
     }
 
     @Override
@@ -55,8 +60,16 @@ public class QuoteServiceImpl implements QuoteService {
     }
 
     @Override
-    public Set<Quote> getQuotesForMovieId(Long movieId) throws ResourceNotFoundException {
+    public List<Quote> getQuotesForMovieId(Long movieId) throws ResourceNotFoundException {
         return quotesRepository.findByMovieId(movieId);
+    }
+
+    @Override
+    public List<Quote> getQuotesInRealTime(int limit) {
+        return quotesRepository.findAll().stream()
+            .sorted((q1, q2) -> Long.compare(q2.getId(), q1.getId()))
+            .limit(5)
+            .collect(Collectors.toList());
     }
     
 }
