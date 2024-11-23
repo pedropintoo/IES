@@ -1,4 +1,3 @@
-import sys
 import sys, types
 
 m = types.ModuleType('kafka.vendor.six.moves', 'Mock module')
@@ -8,25 +7,27 @@ sys.modules['kafka.vendor.six.moves'] = m
 from kafka import KafkaConsumer, TopicPartition
 
 # Kafka Configuration
-bootstrap_servers = 'localhost:29092'  # Replace with your Kafka broker address
-topic_name = 'lab05_115304'  # Replace with the topic you want to consume from
-group_id = 'consumer1'  # Choose a unique group ID for your consumer
+bootstrap_servers = 'localhost:29092'
+topic_name = 'lab05_115304'
+group_id = 'consumer1'
 
-# Create a Kafka consumer instance
+# Create Kafka consumer instance
 consumer = KafkaConsumer(
     topic_name,
     bootstrap_servers=bootstrap_servers,
     group_id=group_id,
-    enable_auto_commit=True,
-    auto_offset_reset='earliest'  # Start consuming from the beginning of the topic if no offset is stored
+    enable_auto_commit=True,  # Automatically commit offsets
+    auto_offset_reset='earliest'  # Start from the beginning if no offset is stored
 )
 
+# List topic partitions
 PARTITIONS = []
 for partition in consumer.partitions_for_topic(topic_name):
     PARTITIONS.append(TopicPartition(topic_name, partition))
-    
+
+# Print end offsets
 end_offsets = consumer.end_offsets(PARTITIONS)
-print(end_offsets)
+print("End Offsets:", end_offsets)
 
 # Consume messages
 for message in consumer:
