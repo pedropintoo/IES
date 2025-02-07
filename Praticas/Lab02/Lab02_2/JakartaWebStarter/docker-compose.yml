@@ -1,0 +1,9 @@
+version: '3'
+services:
+  tomcat:
+    image: tomcat:10.1-jdk17
+    container_name: jakarta_web_starter
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target/:/usr/local/tomcat/webapps/
